@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-03-04T21:52:42.657780" rpa="false" schemaversion="5">
+<suite id="s1" name="Deletealarm" source="c:\Users\ray_p\Desktop\Quiz 3\Sanber53-test\deletealarm.robot">
+<test id="s1-t1" name="Delete Existing alarm clock" line="26">
+<kw name="Open clock Application">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>remote_url=http://localhost:4723/wd/hub</arg>
+<arg>platformName=android</arg>
+<arg>platformVersion=9.0</arg>
+<arg>deviceName=Pixel 2 XL API 34</arg>
+<arg>appium:apppackage=com.example.myapplication</arg>
+<arg>appium:mainactivity=com.example.myapplication.mainactivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2024-03-04T21:52:43.002067" elapsed="23.716172"/>
+</kw>
+<status status="PASS" start="2024-03-04T21:52:43.001048" elapsed="23.718190"/>
+</kw>
+<kw name="Click Existing alarm">
+<kw name="Click Element At Coordinates" owner="AppiumLibrary">
+<msg time="2024-03-04T21:53:06.720237" level="WARN">Keyword 'AppiumLibrary.Click Element At Coordinates' is deprecated. Since selenium v4, use other keywords.</msg>
+<msg time="2024-03-04T21:53:06.723756" level="INFO">Pressing at (833, 1512).</msg>
+<arg>coordinate_X=833</arg>
+<arg>coordinate_Y=1512</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use other keywords.</doc>
+<status status="PASS" start="2024-03-04T21:53:06.720237" elapsed="0.132892"/>
+</kw>
+<status status="PASS" start="2024-03-04T21:53:06.719238" elapsed="0.133891"/>
+</kw>
+<kw name="Click delete button">
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2024-03-04T21:53:06.855130" level="INFO">Clicking element '//android.widget.Button[@resource-id="com.google.android.deskclock:id/delete"]'.</msg>
+<msg time="2024-03-04T21:53:15.647437" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.google.android.deskclock:id/delete"]</msg>
+<arg>locator=//android.widget.Button[@resource-id="com.google.android.deskclock:id/delete"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2024-03-04T21:53:06.854128" elapsed="8.794309"/>
+</kw>
+<status status="PASS" start="2024-03-04T21:53:06.854128" elapsed="8.794309"/>
+</kw>
+<kw name="verify existing alarm is deleted">
+<kw name="Page Should Not Contain Element" owner="AppiumLibrary">
+<msg time="2024-03-04T21:53:16.156230" level="INFO">Current page not contains element '//android.widget.TextView[@content-desc="3:00 PM"]'.</msg>
+<msg time="2024-03-04T21:53:16.156230" level="INFO">xpath criteria: //android.widget.TextView[@content-desc="3:00 PM"]</msg>
+<arg>locator=//android.widget.TextView[@content-desc="3:00 PM"]</arg>
+<doc>Verifies that current page not contains `locator` element.</doc>
+<status status="PASS" start="2024-03-04T21:53:15.649433" elapsed="0.507805"/>
+</kw>
+<status status="PASS" start="2024-03-04T21:53:15.648437" elapsed="0.508801"/>
+</kw>
+<kw name="Close Applications">
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2024-03-04T21:53:16.158238" elapsed="0.172802"/>
+</kw>
+<status status="PASS" start="2024-03-04T21:53:16.157238" elapsed="0.173802"/>
+</kw>
+<status status="PASS" start="2024-03-04T21:52:43.000024" elapsed="33.332016"/>
+</test>
+<status status="PASS" start="2024-03-04T21:52:42.667829" elapsed="33.665213"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Deletealarm">Deletealarm</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-03-04T21:53:06.720237" level="WARN">Keyword 'AppiumLibrary.Click Element At Coordinates' is deprecated. Since selenium v4, use other keywords.</msg>
+</errors>
+</robot>
